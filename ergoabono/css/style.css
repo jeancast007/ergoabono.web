@@ -1,0 +1,310 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Fondo claro como Filbox */
+    color: #333; /* Texto oscuro */
+    line-height: 1.6;
+}
+
+header {
+    background-color: #fff;
+    color: #222;
+    padding: 1em 2em;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-container img {
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 15px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav a {
+    color: #555;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #222;
+}
+
+
+   
+        /* background-color: #e9ecef; */ /* Elimina o comenta el fondo gris */
+        .hero {
+
+          background-image: url('../fondos/fondo5.jpg'); /* Reemplaza con el nombre de tu imagen *//* ... otros estilos ... *
+        background-size: cover; /* Cubre todo el espacio disponible */
+        background-position: center; /* Centra la imagen */
+        color: white; /* Asegúrate de que el texto sea legible sobre la imagen */
+        padding: 4em 2em;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* height: 400px; */ /* Mantén o ajusta la altura según necesites */
+    }
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.7em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra para mejorar la legibilidad */
+}
+
+.hero p {
+    font-size: 1.1em;
+    margin-bottom: 1.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.hero .button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.hero .button:hover {
+    background-color: #1e7e34;
+}
+
+.descripcion {
+    padding: 3em 2em;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.descripcion h2 {
+    color: #28a745; /* Verde */
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.descripcion p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 1em;
+}
+
+.productos-container {
+    padding: 3em 2em;
+    background-color: #f4f4f4;
+}
+
+.productos-container h2 {
+    color: #28a745; /* Verde */
+    font-size: 2em;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+/* --- Estilos para la sección de productos --- */
+.productos-container {
+    padding: 3em 2em;
+    background-color: #f4f4f4;
+}
+
+.productos-container h2 {
+    color: #28a745;
+    font-size: 2em;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    justify-items: center;
+}
+
+/* --- Estilos para la funcionalidad del botón "Comprar" en los productos --- */
+.producto-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.precio {
+    color: #495057;
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.boton-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.producto-caja {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+
+.producto-caja:hover .boton-overlay {
+    opacity: 1;
+}
+
+.boton-comprar {
+    background-color: #00ff0d;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.boton-comprar:hover {
+    background-color: #00b318;
+}
+
+.producto-caja img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    flex-grow: 1;
+    object-fit: contain;
+}
+
+.producto-caja p {
+    color: #6c757d;
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajustar ancho mínimo */
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    justify-items: center; /* Centrar las cajas en la cuadrícula */
+}
+
+.producto-caja {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 100%; /* Ocupar el ancho de su celda en la cuadrícula */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.producto-caja:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.producto-caja img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.producto-caja h3 {
+    color: #333;
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.producto-caja p {
+    color: #6c757d;
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-bottom: 1em;
+    flex-grow: 1; /* La descripción ocupa el espacio restante */
+}
+
+.contacto {
+    background-color: #fff;
+    padding: 3em 2em;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+.contacto h2 {
+    color: #28a745; /* Verde */
+    font-size: 2em;
+    margin-bottom: 1.2em;
+}
+
+.contacto p {
+    color: #495057;
+    margin-bottom: 0.8em;
+    font-size: 1.1em;
+}
+
+.contacto a {
+    color: #28a745; /* Verde */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contacto a:hover {
+    color: #1e7e34; /* Verde más oscuro al pasar el ratón */
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    width: 100%;
+    font-size: 0.9em;
+}
